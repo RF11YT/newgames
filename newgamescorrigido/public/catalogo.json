@@ -1,0 +1,22 @@
+{
+  "_instrucoes": [
+    "Este é o catálogo da NewGames. Edite este arquivo para atualizar os produtos do site — não precisa mexer no código.",
+    "Cada produto precisa de: id (único), nome, categoria, condicao, preco, imagem e descricao. precoPix é opcional.",
+    "categoria aceita: playstation, xbox, nintendo, retro, pcgamer, acessorios.",
+    "condicao aceita: Novo, Seminovo, Retro.",
+    "imagem: /nome-da-foto.jpg (foto que está na pasta public) OU um link https completo da foto.",
+    "preco e precoPix sao numeros, use ponto para os centavos. Ex: 899.90.",
+    "Vendeu o produto? Apague o bloco dele daqui. Chegou um novo? Copie um bloco e troque os dados."
+  ],
+  "produtos": [
+    {
+      "id": "ps2-slim-01",
+      "nome": "PlayStation 2 Slim na Caixa — Kit Completo com Jogos",
+      "categoria": "playstation",
+      "condicao": "Retro",
+      "preco": 499.0,
+      "imagem": "/ps2.jpg",
+      "descricao": "PS2 Slim original na caixa, revisado e pronto pra jogar. Acompanha: controle original, memory card 8MB com OPL e jogos clássicos já instalados, kit conversor de vídeo HD (HDMI / Full HD 1080p), cabo AV e cabo de energia. Kit completo — é só ligar e reviver os grandes momentos. Estoque: 1 unidade."
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * NewGames — design system synthwave / cyberpunk.
+ * Todas as cores em oklch, expostas como tokens semânticos.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-neon-blue: var(--neon-blue);
+  --color-neon-purple: var(--neon-purple);
+  --color-neon-magenta: var(--neon-magenta);
+  --color-whatsapp: var(--whatsapp);
+  --color-chart-1: var(--neon-blue);
+  --color-chart-2: var(--neon-purple);
+  --color-chart-3: var(--neon-magenta);
+  --color-chart-4: var(--neon-blue);
+  --color-chart-5: var(--neon-purple);
+  --color-sidebar: var(--surface);
+  --color-sidebar-foreground: var(--foreground);
+  --color-sidebar-primary: var(--neon-blue);
+  --color-sidebar-primary-foreground: var(--foreground);
+  --color-sidebar-accent: var(--surface-2);
+  --color-sidebar-accent-foreground: var(--foreground);
+  --color-sidebar-border: var(--border);
+  --color-sidebar-ring: var(--ring);
+  --font-display: "Raleway", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+  /* #0A0E27 */
+  --background: oklch(0.16 0.083 274.5);
+  --foreground: oklch(1 0 0);
+  /* #12183A */
+  --surface: oklch(0.21 0.079 275.6);
+  /* #1A1A1A */
+  --surface-2: oklch(0.21 0 0);
+  --card: oklch(0.21 0.079 275.6);
+  --card-foreground: oklch(1 0 0);
+  --popover: oklch(0.21 0.079 275.6);
+  --popover-foreground: oklch(1 0 0);
+  /* #00A8FF */
+  --neon-blue: oklch(0.68 0.185 245.9);
+  /* #9D00FF */
+  --neon-purple: oklch(0.53 0.313 302.2);
+  /* #FF00E0 */
+  --neon-magenta: oklch(0.65 0.325 328.4);
+  --whatsapp: oklch(0.68 0.17 148);
+  --primary: var(--neon-blue);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.26 0.075 276);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.26 0.075 276);
+  --muted-foreground: oklch(0.72 0.03 268);
+  --accent: var(--neon-purple);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.62 0.24 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--neon-blue);
+
+  --gradient-neon: linear-gradient(
+    100deg,
+    var(--neon-blue) 0%,
+    var(--neon-purple) 52%,
+    var(--neon-magenta) 100%
+  );
+  --glow-blue: 0 0 24px color-mix(in oklab, var(--neon-blue) 45%, transparent);
+  --glow-purple: 0 0 28px color-mix(in oklab, var(--neon-purple) 45%, transparent);
+  --glow-magenta: 0 0 28px color-mix(in oklab, var(--neon-magenta) 45%, transparent);
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--neon-magenta) 45%, transparent);
+  }
+}
+
+/* Título principal: Raleway Black itálico */
+@utility font-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+@utility text-gradient-neon {
+  background-image: var(--gradient-neon);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-neon {
+  background-image: var(--gradient-neon);
+}
+
+@utility glow-blue {
+  box-shadow: var(--glow-blue);
+}
+
+@utility glow-purple {
+  box-shadow: var(--glow-purple);
+}
+
+@utility glow-magenta {
+  box-shadow: var(--glow-magenta);
+}
+
+/* Cartão glassmorphism com borda neon que acende no hover */
+@utility glass-card {
+  background: color-mix(in oklab, var(--surface) 70%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--color-border);
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: color-mix(in oklab, var(--neon-blue) 70%, transparent);
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--neon-purple) 30%, transparent),
+      0 18px 40px -18px color-mix(in oklab, var(--neon-purple) 70%, transparent),
+      var(--glow-blue);
+  }
+}
+
+/* Grade retrô em perspectiva */
+@utility retro-grid {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 40% -50% -20% -50%;
+    background-image:
+      linear-gradient(
+        to right,
+        color-mix(in oklab, var(--neon-blue) 28%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--neon-purple) 28%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 64px 64px;
+    transform: perspective(420px) rotateX(62deg);
+    mask-image: linear-gradient(to bottom, transparent, black 45%, transparent);
+    pointer-events: none;
+  }
+}
+
+/* Efeito CRT / scanline para a área retrô */
+@utility scanlines {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--neon-magenta) 8%, transparent) 0px,
+      color-mix(in oklab, var(--neon-magenta) 8%, transparent) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+    pointer-events: none;
+    opacity: 0.55;
+  }
+}
+
+/* Borda "pixelada" retrô */
+@utility pixel-border {
+  border: 2px solid color-mix(in oklab, var(--neon-magenta) 65%, transparent);
+  border-radius: 0;
+  box-shadow:
+    4px 0 0 0 color-mix(in oklab, var(--neon-magenta) 25%, transparent),
+    -4px 0 0 0 color-mix(in oklab, var(--neon-blue) 25%, transparent);
+}
+
+@utility neon-divider {
+  height: 1px;
+  background: var(--gradient-neon);
+  opacity: 0.5;
+}
+
+@utility float-slow {
+  animation: ng-float 7s ease-in-out infinite;
+}
+
+@keyframes ng-float {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-22px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes ng-pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--whatsapp) 55%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 16px transparent;
+  }
+}
+
+@utility pulse-wa {
+  animation: ng-pulse-glow 2.4s ease-out infinite;
+}
