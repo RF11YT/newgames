@@ -82,8 +82,13 @@ function normalizar(item: Record<string, unknown>): Produto | null {
       ? "Retrô"
       : "Novo";
 
-  const preco = Number(item["preco"]);
-  if (!item["id"] || !item["nome"] || Number.isNaN(preco)) return null;
+  if (!item["id"] || !item["nome"]) return null;
+  const precoBruto = item["preco"];
+  const precoNum = Number(precoBruto);
+  const preco =
+    precoBruto == null || precoBruto === "" || Number.isNaN(precoNum)
+      ? 0
+      : precoNum;
 
   const precoPixBruto = item["precoPix"];
   const precoPix = Number(precoPixBruto);
@@ -114,4 +119,6 @@ export async function carregarProdutos(): Promise<Produto[]> {
 }
 
 export const formatarPreco = (valor: number) =>
-  valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+  valor > 0
+    ? valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+    : "Sob consulta";
