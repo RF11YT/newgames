@@ -10,13 +10,60 @@
   ],
   "produtos": [
     {
-      "id": "ps2-slim-01",
-      "nome": "PlayStation 2 Slim na Caixa — Kit Completo com Jogos",
+      "id": "ps2-slim",
+      "nome": "PlayStation 2 Slim",
       "categoria": "playstation",
-      "condicao": "Retro",
-      "preco": 499.0,
+      "condicao": "Seminovo",
       "imagem": "/ps2.jpg",
-      "descricao": "PS2 Slim original na caixa, revisado e pronto pra jogar. Acompanha: controle original, memory card 8MB com OPL e jogos clássicos já instalados, kit conversor de vídeo HD (HDMI / Full HD 1080p), cabo AV e cabo de energia. Kit completo — é só ligar e reviver os grandes momentos. Estoque: 1 unidade."
+      "descricao": "Console PlayStation 2 Slim completo."
+    },
+    {
+      "id": "chaveiro-controle-playstation",
+      "nome": "Chaveiro Controle PlayStation",
+      "categoria": "acessorios",
+      "condicao": "Novo",
+      "imagem": "/chaveiro-controle-playstation.jpg",
+      "descricao": "Chaveiro gamer inspirado no controle PlayStation, ideal para chaves, mochilas e coleção."
+    },
+    {
+      "id": "chaveiro-machado-leviata-god-of-war",
+      "nome": "Chaveiro Machado Leviatã – God of War",
+      "categoria": "acessorios",
+      "condicao": "Novo",
+      "imagem": "/chaveiro-machado-leviata-god-of-war.jpg",
+      "descricao": "Chaveiro inspirado no Machado Leviatã de God of War, com acabamento metálico e detalhes estilizados."
+    },
+    {
+      "id": "chaveiro-laminas-do-caos-god-of-war",
+      "nome": "Chaveiro Lâminas do Caos – God of War",
+      "categoria": "acessorios",
+      "condicao": "Novo",
+      "imagem": "/chaveiro-laminas-do-caos-god-of-war.jpg",
+      "descricao": "Chaveiro das Lâminas do Caos de God of War, em metal com acabamento envelhecido. Aprox. 15,5 cm de comprimento."
+    },
+    {
+      "id": "chaveiro-dragao-mortal-kombat",
+      "nome": "Chaveiro Dragão Mortal Kombat",
+      "categoria": "acessorios",
+      "condicao": "Novo",
+      "imagem": "/chaveiro-dragao-mortal-kombat.jpg",
+      "descricao": "Chaveiro com o emblema do dragão de Mortal Kombat, em metal. Aprox. 4,5 cm de diâmetro."
+    },
+    {
+      "id": "chaveiro-kratos-god-of-war",
+      "nome": "Chaveiro Kratos – God of War",
+      "categoria": "acessorios",
+      "condicao": "Novo",
+      "imagem": "/chaveiro-kratos-god-of-war.jpg",
+      "descricao": "Chaveiro do Kratos (God of War), com pintura detalhada do rosto e a marca característica."
+    },
+    {
+      "id": "chaveiro-revolver-red-dead-redemption-2",
+      "nome": "Chaveiro Revólver Red Dead Redemption 2",
+      "categoria": "acessorios",
+      "condicao": "Novo",
+      "imagem": "/chaveiro-revolver-red-dead-redemption-2.jpg",
+      "descricao": "Chaveiro revólver de Red Dead Redemption 2 com pingente do logo, em metal."
     }
   ]
 }
